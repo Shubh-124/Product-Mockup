@@ -18,9 +18,10 @@
   <!--CSS-->
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&family=Roboto:wght@300&display=swap');
+
+
 
   #title {
     background-color: #ff4c68;
@@ -46,6 +47,8 @@
 
   h3 {
     font-family: 'Roboto';
+    line-height: 1.5;
+    font-size: 3rem;
   }
 
   .container {
@@ -59,6 +62,7 @@
     -o-transform: rotate(25deg);
     transform: rotate(25deg);
   }
+
 
   /* Navigation bar */
   .navbar-brand {
@@ -80,6 +84,9 @@
 
   .container1 {
     padding: 7% 15%;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
   }
 
   .icon {
@@ -95,8 +102,15 @@
     color: #ff4c68;
   }
 
+  .title-image {
+    width: 20%;
+    position: absolute;
+
+  }
+
   #features {
     text-align: center;
+
   }
 
   /* Testimonials Section */
@@ -134,6 +148,41 @@
 
   .pricing-card {
     padding: 10px;
+  }
+
+  #cta {
+    background-color: #ff4c68;
+    text-align: center;
+    font-family: 'Roboto';
+    color: #fff;
+    padding: 50px;
+  }
+
+  .btn1 {
+    margin: 2% 2%;
+  }
+
+  #footer {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+  }
+
+  .social {
+    margin: 10px;
+  }
+
+  /* Making it mobile-responsive */
+  @media (max-width:1028px) {
+    .title-image {
+      position: static;
+      transform: rotate(0);
+      width: 50%;
+    }
+
+    #title {
+      text-align: center;
+    }
   }
 </style>
 
@@ -174,7 +223,7 @@
             Download</button>
         </div>
         <div class="col-md-6">
-          <img class="rotateimg25" src="images/iphone6.png" alt="iphone-mockup">
+          <img class="rotateimg25 title-image" src="images/iphone6.png" alt="iphone-mockup">
         </div>
       </div>
     </div>
@@ -354,19 +403,23 @@
 
   <!-- Call to Action -->
 
-  <section id="cta">
-
-    <h3>Find the True Love of Your Dog's Life Today.</h3>
-    <button type="button">Download</button>
-    <button type="button">Download</button>
-
-  </section>
+  <container class="container2">
+    <section id="cta">
+      <h3>Find the True Love of Your Dog's Life Today.</h3>
+      <button type="button" class="btn1 btn btn-dark btn-lg"><i class="fa-brands fa-apple"></i> Download</button>
+      <button type="button" class="btn1 btn btn-outline-light btn-lg"><i class="fa-brands fa-google-play"></i>
+        Download</button>
+    </section>
+  </container>
 
 
   <!-- Footer -->
 
   <footer id="footer">
-
+    <i class="social fa-brands fa-twitter"></i>
+    <i class="social fa-brands fa-facebook-f"></i>
+    <i class="social fa-brands fa-instagram"></i>
+    <i class="social fa-solid fa-envelope"></i>
     <p>© Copyright TinDog</p>
 
   </footer>
